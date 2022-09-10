@@ -1,0 +1,15 @@
+{
+  "name": "Boat-Safari-Management-System",
+  "version": "1.0.0",
+  "description": "Boat Safari Management System API",
+  "main": "app.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon --exec babel-node -- src/app.js"
+  }, 
+  "devDependencies": {
+    "@babel/core": "^7.19.0",
+    "@babel/node": "^7.18.10",
+    "nodemon": "^2.0.19"
+  }
+}
