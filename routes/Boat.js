@@ -32,7 +32,6 @@ router.route('/add').post((req, res) => {
       .then(() => res.json('Boat Deleted.'))
       .catch(err => res.status(400).json('Error: ' + err));
   });
-  
 
 
   //update boat details----------------------------------------------------------------------------------
@@ -74,6 +73,14 @@ router.route('/add').post((req, res) => {
     
     
 })
+
+
+
+
+
+
+
+
 
 
 
