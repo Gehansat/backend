@@ -49,30 +49,39 @@ router.route('/add').post((req, res) => {
   //     })
   //     .catch(err => res.status(400).json('Error: ' + err));
   // });
+
+
+
+
+
+
+
+
+//  recently 
 // -----------------------------------------------------
-  router.route("/update/:id").put(async(req,res)=>{
+  // router.route("/update/:id").put(async(req,res)=>{
 
-    let boatId= req.params.boatId;
-    const{Capacity,Type,Cost,Description}= req.body; 
+  //   let boatId= req.params.boatId;
+  //   const{Capacity,Type,Cost,Description}= req.body; 
 
-    const updateBoat={
-        Capacity,
-        Type,
-        Cost,
-        Description,
+  //   const updateBoat={
+  //       Capacity,
+  //       Type,
+  //       Cost,
+  //       Description,
     
-      }
+  //     }
 
-    const update=  await Boat.findByIdAndUpdate(boatId,updateBoat)
-    .then(()=>{
-        res.status(200).send({status:"Boat newly updated"})
-    }).catch((error)=>{
-        console.log(error);
-        res.status(500).send({status:"Task Not Completed"});
-    })
-    
-    
-})
+  //   const update=  await Boat.findByIdAndUpdate(boatId,updateBoat)
+  //   .then(()=>{
+  //       res.status(200).send({status:"Boat newly updated"})
+  //   }).catch((error)=>{
+  //       console.log(error);
+  //       res.status(500).send({status:"Task Not Completed"});
+  //   })
+    //
+    //
+//
 
 
 
@@ -87,27 +96,27 @@ router.route('/add').post((req, res) => {
 
 
   //update specific id----------------------------------------------------------------------------------------------------
-  router.route("/get/:boatId").get(async(req,res)=>{
-    try{
-        let boatId = req.params.boatId;
-    const Data =await Boat.findById(boatId)
-            .then((Data)=>{
-                res.status(200).send({status:"boat fetch",Data})
+  // router.route("/get/:boatId").get(async(req,res)=>{
+  //   try{
+  //       let boatId = req.params.boatId;
+  //   const Data =await Boat.findById(boatId)
+  //           .then((Data)=>{
+  //               res.status(200).send({status:"boat fetch",Data})
 
-    }).catch((error)=>{
-        console.log(error);
-        res.status(500).send({status:"error with get user",error:error});
-    })
-    }
-    catch(error){
-        console.log(error);
-        res.status(500).send({status:"error with get user",error:error});
-    }
+  //   }).catch((error)=>{
+  //       console.log(error);
+  //       res.status(500).send({status:"error with get user",error:error});
+  //   })
+  //   }
+  //   catch(error){
+  //       console.log(error);
+  //       res.status(500).send({status:"error with get user",error:error});
+  //   }
 
     
 
 
-});
+// });
 
   
   module.exports = router;
