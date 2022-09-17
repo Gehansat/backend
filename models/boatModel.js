@@ -23,5 +23,5 @@ const BoatSchema = new Schema ({
     },
 },{timestamps:true})
 
-const Boa = mongoose.model("Boa" ,BoatSchema );
-module.exports = Boa;
+const Boat = mongoose.model("Boat" ,BoatSchema );
+module.exports = Boat;
